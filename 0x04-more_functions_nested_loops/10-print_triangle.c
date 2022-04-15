@@ -1,42 +1,28 @@
-#include <stdio.h>
-/**
- * main - check the code for Holberton School students.
- *
- * Return: void.
+#include "main.h"
+
+/**print_triangle - check for a digit
+ * @size : integer type
+ * Return:void
  */
 
-int main(void)
+void print_triangle(int size)
 {
 
-	int i = 1;
+	int i = 1, ii;
 
-	while (i <= 100)
+	while (i <= size && size > 0)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+
+		ii = 0;
+		while (ii < size - i)
 		{
-			printf("FizzBuzz");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else
-		{
-			printf("%i", i);
+			_putchar(' ');
+			ii++;
 		}
 
-		if (i != 100)
-		{
-			putchar(' ');
-		}
-
+		_putchar('\n');
 		i++;
 	}
-	putchar('\n');
-	return (0);
-
+	if (i == 1)
+		_putchar('\n');
 }
